@@ -6,5 +6,8 @@ Java Spring Boot example. Example includes code written in Java.
 
 ## Links
 
+
+* General
+    * [Java Development Examples](https://github.com/mneiferbag/java-examples)
 * Spring
     * [Spring](https://spring.io/)
