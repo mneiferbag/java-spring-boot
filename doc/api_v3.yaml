@@ -1,0 +1,124 @@
+openapi: 3.0.1
+info:
+  title: Verbs Service
+  version: 0.1.0
+servers:
+- url: http://localhost:8080/v1
+paths:
+  /verb:
+    post:
+      summary: Add a new Verb
+      operationId: addVerb
+      requestBody:
+        description: Verb object that needs to be added
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Verb'
+        required: true
+      responses:
+        200:
+          description: Successful operation
+          content: {}
+        405:
+          description: Invalid input
+          content: {}
+    get:
+      summary: Get verbs
+      operationId: getVerbs
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Verb'
+  /verb/{name}:
+    get:
+      summary: Get verb by name
+      operationId: getVerbByName
+      parameters:
+      - name: name
+        in: path
+        description: Name of the verb that will be returned
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Verb'
+        400:
+          description: Invalid parameter value
+          content: {}
+    put:
+      summary: Update verb by name
+      operationId: updateVerb
+      parameters:
+      - name: name
+        in: path
+        description: Name of the verb that needs to be updated
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: Verb object that needs to be updated
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Verb'
+        required: true
+      responses:
+        200:
+          description: Successful operation
+          content: {}
+        400:
+          description: Invalid parameter value
+          content: {}
+        404:
+          description: Verb not found
+          content: {}
+    delete:
+      summary: Delete verb by name
+      operationId: deleteVerb
+      parameters:
+      - name: name
+        in: path
+        description: Name of the verb that needs to be deleted
+        required: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content: {}
+        400:
+          description: Invalid parameter value
+          content: {}
+        404:
+          description: Verb not found
+          content: {}
+components:
+  schemas:
+    Verb:
+      type: object
+      properties:
+        name:
+          type: string
+        first:
+          type: string
+        second:
+          type: string
+        third:
+          type: string
+        firsts:
+          type: string
+        seconds:
+          type: string
+        thirds:
+          type: string
