@@ -12,5 +12,10 @@ Java Spring Boot example. Example includes code written in Java.
 * General
     * [Gradle Build Tool](https://gradle.org/)
     * [Java Development Examples](https://github.com/mneiferbag/java-examples)
+    * [OpenAPI Initiative (OAI)](https://www.openapis.org/)
+    * [REST Assured](http://rest-assured.io/) - Testing and validating REST services in Java
+    * [Swagger Codegen](https://github.com/swagger-api/swagger-codegen)
+    * [Swagger Editor](http://editor.swagger.io/)
+    * [Swagger Validator](https://validator.swagger.io/)
 * Spring
     * [Spring](https://spring.io/)
