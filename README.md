@@ -18,4 +18,5 @@ Java Spring Boot example. Example includes code written in Java.
     * [Swagger Editor](http://editor.swagger.io/)
     * [Swagger Validator](https://validator.swagger.io/)
 * Spring
+    * [OpenAPI 3 Library for Spring Boot](https://springdoc.org/)
     * [Spring](https://spring.io/)
