@@ -13,7 +13,7 @@ public class VerbController {
 
     @GetMapping("/verb")
     public Verb getVerbs(@RequestParam(value = "name") String name) {
-        Verb verb = new Verb();
+        var verb = new Verb();
         verb.setName("trabajar");
         verb.setFirst("trabajo");
         verb.setSecond("trabajas");
