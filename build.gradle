@@ -15,9 +15,11 @@ repositories {
 }
 
 dependencies {
+    // implementation 'com.sun.xml.bind:jaxb-osgi:3.0.1'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.8'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.5.8'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'io.rest-assured:spring-mock-mvc:3.3.0'
 }
 
 test {
