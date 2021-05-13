@@ -9,7 +9,7 @@
 			"VARIANT": "11",
 			// Options
 			"INSTALL_MAVEN": "false",
-			"INSTALL_GRADLE": "false",
+			"INSTALL_GRADLE": "true",
 			"INSTALL_NODE": "false",
 			"NODE_VERSION": "lts/*"
 		}
