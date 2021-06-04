@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.4.5'
+    id 'org.springframework.boot' version '2.5.0'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
@@ -15,11 +15,11 @@ repositories {
 }
 
 dependencies {
-    // implementation 'com.sun.xml.bind:jaxb-osgi:3.0.1'
+    implementation 'org.glassfish.jaxb:jaxb-runtime'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springdoc:springdoc-openapi-ui:1.5.8'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'io.rest-assured:spring-mock-mvc:3.3.0'
+    testImplementation 'io.rest-assured:spring-mock-mvc:4.4.0'
 }
 
 test {
