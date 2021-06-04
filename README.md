@@ -8,7 +8,9 @@ Java Spring Boot example. Example includes code written in Java.
 
 ## Links
 
-
+* Spring
+    * [OpenAPI 3 Library for Spring Boot](https://springdoc.org/)
+    * [Spring](https://spring.io/)
 * General
     * [Gradle Build Tool](https://gradle.org/)
     * [Java Development Examples](https://github.com/mneiferbag/java-examples)
@@ -17,6 +19,3 @@ Java Spring Boot example. Example includes code written in Java.
     * [Swagger Codegen](https://github.com/swagger-api/swagger-codegen)
     * [Swagger Editor](http://editor.swagger.io/)
     * [Swagger Validator](https://validator.swagger.io/)
-* Spring
-    * [OpenAPI 3 Library for Spring Boot](https://springdoc.org/)
-    * [Spring](https://spring.io/)
