@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'de.mneifercons.examples'
+group = 'eu.mneifercons.examples'
 version = '0.0.1-SNAPSHOT'
 
 sourceCompatibility = '11'
@@ -17,9 +17,9 @@ repositories {
 dependencies {
     implementation 'org.glassfish.jaxb:jaxb-runtime'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springdoc:springdoc-openapi-ui:1.5.8'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.5'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'io.rest-assured:spring-mock-mvc:4.4.0'
+    testImplementation 'io.rest-assured:spring-mock-mvc:4.5.0'
 }
 
 test {

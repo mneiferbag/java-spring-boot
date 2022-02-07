@@ -1,4 +1,4 @@
-package de.mneifercons.examples.spring;
+package eu.mneifercons.examples.spring;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ public class VerbController {
 
     private static final Logger log = LoggerFactory.getLogger(VerbController.class);
 
-    private VerbService verbService;
+    private final VerbService verbService;
 
     @Autowired
     public VerbController(VerbService verbService) {

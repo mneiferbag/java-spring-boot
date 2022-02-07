@@ -1,4 +1,4 @@
-package de.mneifercons.examples.spring;
+package eu.mneifercons.examples.spring;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.given;
 import static org.hamcrest.Matchers.*;

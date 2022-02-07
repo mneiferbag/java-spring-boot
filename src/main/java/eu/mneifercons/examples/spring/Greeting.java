@@ -1,4 +1,4 @@
-package de.mneifercons.examples.spring;
+package eu.mneifercons.examples.spring;
 
 public class Greeting {
 

@@ -1,10 +1,8 @@
-package de.mneifercons.examples.spring;
+package eu.mneifercons.examples.spring;
 
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-
-import java.util.List;
 
 public class VerbServiceTest {
 

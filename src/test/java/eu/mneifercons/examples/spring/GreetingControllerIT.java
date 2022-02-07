@@ -1,4 +1,4 @@
-package de.mneifercons.examples.spring;
+package eu.mneifercons.examples.spring;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -30,7 +30,7 @@ class GreetingControllerIT {
     }
 
     @Test
-    void getHello() throws Exception {
+    void getHello() {
         ResponseEntity<String> response = template.getForEntity(base.toString(), String.class);
         assertThat(response.getBody()).isEqualTo("{\"id\":1,\"content\":\"Hello, World!\"}");
     }
