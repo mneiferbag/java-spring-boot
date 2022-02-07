@@ -6,6 +6,20 @@ Java [Spring](https://spring.io/) Boot example. Example includes code written in
 
 [![CodeQL](https://github.com/mneiferbag/java-spring-boot/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/mneiferbag/java-spring-boot/actions/workflows/codeql-analysis.yml)
 
+## Spring Boot
+
+The Swagger UI page is available at
+
+[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+and the OpenAPI description is available at
+
+[http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
+
+## Gradle
+
+Run `gradle wrapper --gradle-version 7.0` to update the project to 7.0.
+
 ## Links
 
 * OpenAPI
