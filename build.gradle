@@ -1,7 +1,7 @@
 plugins {
-    id 'org.springframework.boot' version '2.5.0'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
+    id "org.springframework.boot" version "2.6.3"
+    id "io.spring.dependency-management" version "1.0.11.RELEASE"
+    id "java"
 }
 
 group = 'eu.mneifercons.examples'
@@ -15,9 +15,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.glassfish.jaxb:jaxb-runtime'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springdoc:springdoc-openapi-ui:1.6.5'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.6'
+    implementation 'org.glassfish.jaxb:jaxb-runtime'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.rest-assured:spring-mock-mvc:4.5.0'
 }
