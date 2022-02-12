@@ -21,8 +21,10 @@ class VerbControllerTest {
         VerbService service = new VerbServiceImpl();
         service.addVerb(verb);
 
+        VerbController controller = new VerbController(service);
+
         given()
-            .standaloneSetup(service)
+            .standaloneSetup(controller)
             .param("name", "caminar")
         .when()
             .get("/verb")
