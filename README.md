@@ -18,7 +18,7 @@ and the OpenAPI description is available at
 
 ## Gradle
 
-Run `gradle wrapper --gradle-version 7.0` to update the project to 7.0.
+Run `gradle wrapper --gradle-version 7.4` to update the project to 7.4.
 
 ## Links
 
@@ -34,3 +34,4 @@ Run `gradle wrapper --gradle-version 7.0` to update the project to 7.0.
 * General
   * [Gradle Build Tool](https://gradle.org/)
   * [Java Development Examples](https://github.com/mneiferbag/java-examples)
+  * [Testing the Web Layer](https://spring.io/guides/gs/testing-web/) - Spring Guide
