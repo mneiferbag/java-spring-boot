@@ -1,8 +1,8 @@
-# Java Spring Boot Example
+# Java Spring Example
 
 Licensed under the MIT License. See file [LICENSE](./LICENSE).
 
-Java [Spring](https://spring.io/) Boot example. Example includes code written in Java.
+Java [Spring](https://spring.io/) example. Example includes code written in Java.
 
 [![CodeQL](https://github.com/mneiferbag/java-spring-boot/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/mneiferbag/java-spring-boot/actions/workflows/codeql-analysis.yml)
 
