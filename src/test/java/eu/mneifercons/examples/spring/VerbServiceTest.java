@@ -1,14 +1,21 @@
 package eu.mneifercons.examples.spring;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class VerbServiceTest {
 
-    @Test
-    void addVerb() {
-        Verb verb = new Verb();
+    private final String first = "trabajo";
+    private final String name = "trabajar";
+    private Verb verb;
+    private VerbService service;
+
+    @BeforeEach
+    void setUp() {
+        this.verb = new Verb();
         verb.setName("caminar");
         verb.setFirst("camino");
         verb.setSecond("caminas");
@@ -16,66 +23,36 @@ public class VerbServiceTest {
         verb.setFirsts("caminamos");
         verb.setSeconds("camináis");
         verb.setThirds("caminan");
+        this.service = new VerbServiceImpl();
+    }
 
-        VerbService service = new VerbServiceImpl();
-        service.addVerb(verb);
+    @Test
+    void addVerb() {
+        this.service.addVerb(this.verb);
 
-        assertThat(service.getNoOfVerbs(), equalTo(1));
+        assertThat(this.service.getNoOfVerbs(), equalTo(2));
     }
 
     @Test
     void deleteVerb() {
+        this.service.deleteVerb(this.name);
 
+        assertThat(this.service.getNoOfVerbs(), equalTo(0));
     }
 
     @Test
     void getVerbByName() {
-        Verb verb = new Verb();
-        verb.setName("caminar");
-        verb.setFirst("camino");
-        verb.setSecond("caminas");
-        verb.setThird("camina");
-        verb.setFirsts("caminamos");
-        verb.setSeconds("camináis");
-        verb.setThirds("caminan");
-
-        VerbService service = new VerbServiceImpl();
-        service.addVerb(verb);
-
-        assertThat(service.getVerbByName("caminar").getFirst(), equalTo("camino"));
+        assertThat(this.service.getVerbByName(this.name).getFirst(), equalTo(this.first));
     }
 
     @Test
     void getVerbs() {
-        Verb verb = new Verb();
-        verb.setName("caminar");
-        verb.setFirst("camino");
-        verb.setSecond("caminas");
-        verb.setThird("camina");
-        verb.setFirsts("caminamos");
-        verb.setSeconds("camináis");
-        verb.setThirds("caminan");
-
-        VerbService service = new VerbServiceImpl();
-        service.addVerb(verb);
-
-        assertThat(service.getNoOfVerbs(), equalTo(1));
-        assertThat(service.getVerbByName("caminar").getFirst(), equalTo("camino"));
+        assertThat(this.service.getVerbs().get(0).getFirst(), equalTo(this.first));
     }
 
     @Test
     void updateVerb() {
-        Verb verb = new Verb();
-        verb.setName("caminar");
-        verb.setFirst("camin");
-        verb.setSecond("camin");
-        verb.setThird("camin");
-        verb.setFirsts("camin");
-        verb.setSeconds("camin");
-        verb.setThirds("camin");
-
-        VerbService service = new VerbServiceImpl();
-        service.addVerb(verb);
+        this.service.addVerb(this.verb);
 
         Verb changedVerb = new Verb();
         changedVerb.setName("caminar");
@@ -86,14 +63,13 @@ public class VerbServiceTest {
         changedVerb.setSeconds("camináis");
         changedVerb.setThirds("caminan");
 
-        service.updateVerb("caminar", changedVerb);
+        this.service.updateVerb("caminar", changedVerb);
 
-        assertThat(service.getNoOfVerbs(), equalTo(1));
-        assertThat(service.getVerbByName("caminar").getFirst(), equalTo("camino"));
-        assertThat(service.getVerbByName("caminar").getSecond(), equalTo("caminas"));
-        assertThat(service.getVerbByName("caminar").getThird(), equalTo("camina"));
-        assertThat(service.getVerbByName("caminar").getFirsts(), equalTo("caminamos"));
-        assertThat(service.getVerbByName("caminar").getSeconds(), equalTo("camináis"));
-        assertThat(service.getVerbByName("caminar").getThirds(), equalTo("caminan"));
+        assertThat(this.service.getVerbByName("caminar").getFirst(), equalTo("camino"));
+        assertThat(this.service.getVerbByName("caminar").getSecond(), equalTo("caminas"));
+        assertThat(this.service.getVerbByName("caminar").getThird(), equalTo("camina"));
+        assertThat(this.service.getVerbByName("caminar").getFirsts(), equalTo("caminamos"));
+        assertThat(this.service.getVerbByName("caminar").getSeconds(), equalTo("camináis"));
+        assertThat(this.service.getVerbByName("caminar").getThirds(), equalTo("caminan"));
     }
 }

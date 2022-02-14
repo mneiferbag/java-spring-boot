@@ -11,6 +11,18 @@ public class VerbServiceImpl implements VerbService {
 
     private final List<Verb> verbs = new ArrayList<>();
 
+    public VerbServiceImpl() {
+        Verb verb = new Verb();
+        verb.setName("trabajar");
+        verb.setFirst("trabajo");
+        verb.setSecond("trabajas");
+        verb.setThird("trabaja");
+        verb.setFirsts("trabajamos");
+        verb.setSeconds("trabajáis");
+        verb.setThirds("trabajan");
+        this.verbs.add(verb);
+    }
+
     @Override
     public void addVerb(Verb verb) {
         this.verbs.add(verb);

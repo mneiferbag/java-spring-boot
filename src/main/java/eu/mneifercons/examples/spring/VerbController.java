@@ -3,10 +3,7 @@ package eu.mneifercons.examples.spring;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class VerbController {
@@ -22,15 +19,14 @@ public class VerbController {
 
     @GetMapping("/verb")
     public Verb getVerbs(@RequestParam(value = "name") String name) {
-        var verb = this.verbService.getVerbs().get(0);
-
+        var verb = this.verbService.getVerbByName(name);
         log.info("Returning verb: {}", verb);
-
         return verb;
     }
 
     @PostMapping("/verb")
-    public void postVerb() {
-        // TODO implement this
+    public void postVerb(@RequestBody Verb verb) {
+        log.info("Adding verb: {}", verb);
+        this.verbService.addVerb(verb);
     }
 }
