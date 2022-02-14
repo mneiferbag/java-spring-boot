@@ -31,7 +31,7 @@ Run `gradle wrapper --gradle-version 7.4` to update the project to 7.4.
 * Testing
   * [Cornutum/tcases](https://github.com/Cornutum/tcases) - A model-based test case generator
   * [REST Assured](http://rest-assured.io/) - Testing and validating REST services in Java
+  * [Testing the Web Layer](https://spring.io/guides/gs/testing-web/) - Spring Guide
 * General
   * [Gradle Build Tool](https://gradle.org/)
   * [Java Development Examples](https://github.com/mneiferbag/java-examples)
-  * [Testing the Web Layer](https://spring.io/guides/gs/testing-web/) - Spring Guide
