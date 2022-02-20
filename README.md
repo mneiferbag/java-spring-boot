@@ -25,6 +25,7 @@ Run `gradle wrapper --gradle-version 7.4` to update the project to 7.4.
 * OpenAPI
   * [OpenAPI 3 Library for Spring Boot](https://springdoc.org/)
   * [OpenAPI Initiative (OAI)](https://www.openapis.org/)
+  * [OpenAPI Spec 3.0.1](https://spec.openapis.org/oas/v3.0.1)
   * [Swagger Codegen](https://github.com/swagger-api/swagger-codegen)
   * [Swagger Editor](http://editor.swagger.io/)
   * [Swagger Validator](https://validator.swagger.io/)
@@ -35,3 +36,7 @@ Run `gradle wrapper --gradle-version 7.4` to update the project to 7.4.
 * General
   * [Gradle Build Tool](https://gradle.org/)
   * [Java Development Examples](https://github.com/mneiferbag/java-examples)
+
+## Tasks
+
+- Compare generated openapi.yaml and api_v3.yaml
