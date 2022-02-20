@@ -10,7 +10,7 @@ public interface VerbService {
 
     int getNoOfVerbs();
 
-    Verb getVerbByName(String name);
+    Verb getVerb(String name);
 
     List<Verb> getVerbs();
 

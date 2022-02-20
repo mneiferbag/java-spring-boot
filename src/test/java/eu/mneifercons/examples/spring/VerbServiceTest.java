@@ -42,7 +42,7 @@ public class VerbServiceTest {
 
     @Test
     void getVerbByName() {
-        assertThat(this.service.getVerbByName(this.name).getFirst(), equalTo(this.first));
+        assertThat(this.service.getVerb(this.name).getFirst(), equalTo(this.first));
     }
 
     @Test
@@ -65,11 +65,11 @@ public class VerbServiceTest {
 
         this.service.updateVerb("caminar", changedVerb);
 
-        assertThat(this.service.getVerbByName("caminar").getFirst(), equalTo("camino"));
-        assertThat(this.service.getVerbByName("caminar").getSecond(), equalTo("caminas"));
-        assertThat(this.service.getVerbByName("caminar").getThird(), equalTo("camina"));
-        assertThat(this.service.getVerbByName("caminar").getFirsts(), equalTo("caminamos"));
-        assertThat(this.service.getVerbByName("caminar").getSeconds(), equalTo("camináis"));
-        assertThat(this.service.getVerbByName("caminar").getThirds(), equalTo("caminan"));
+        assertThat(this.service.getVerb("caminar").getFirst(), equalTo("camino"));
+        assertThat(this.service.getVerb("caminar").getSecond(), equalTo("caminas"));
+        assertThat(this.service.getVerb("caminar").getThird(), equalTo("camina"));
+        assertThat(this.service.getVerb("caminar").getFirsts(), equalTo("caminamos"));
+        assertThat(this.service.getVerb("caminar").getSeconds(), equalTo("camináis"));
+        assertThat(this.service.getVerb("caminar").getThirds(), equalTo("caminan"));
     }
 }

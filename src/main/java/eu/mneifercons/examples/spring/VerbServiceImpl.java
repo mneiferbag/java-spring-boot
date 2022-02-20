@@ -39,7 +39,7 @@ public class VerbServiceImpl implements VerbService {
     }
 
     @Override
-    public Verb getVerbByName(String name) {
+    public Verb getVerb(String name) {
         List<Verb> matchingVerbs = this.verbs.stream().filter(v -> v.getName().equals(name)).collect(Collectors.toList());
 
         if (matchingVerbs.isEmpty()) {

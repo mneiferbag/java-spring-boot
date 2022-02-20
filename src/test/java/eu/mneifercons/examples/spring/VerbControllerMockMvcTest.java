@@ -30,9 +30,8 @@ class VerbControllerMockMvcTest {
     @Test
     void getVerbByName() {
         given()
-                .param("name", "trabajar")
                 .when()
-                .get("/verb")
+                .get("/verb/trabajar")
                 .then()
                 .statusCode(200)
                 .body("name", equalTo("trabajar"));
