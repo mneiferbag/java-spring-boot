@@ -3,7 +3,7 @@ info:
   title: Verbs Service
   version: 0.1.0
 servers:
-- url: http://localhost:8080/v1
+  - url: http://localhost:8080/v1
 paths:
   /verb:
     post:
@@ -17,17 +17,17 @@ paths:
               $ref: '#/components/schemas/Verb'
         required: true
       responses:
-        200:
+        '200':
           description: Successful operation
           content: {}
-        405:
+        '405':
           description: Invalid input
           content: {}
     get:
       summary: Get verbs
       operationId: getVerbs
       responses:
-        200:
+        '200':
           description: Successful operation
           content:
             application/json:
@@ -38,7 +38,7 @@ paths:
   /verb/{name}:
     get:
       summary: Get verb by name
-      operationId: getVerbByName
+      operationId: getVerb
       parameters:
       - name: name
         in: path
@@ -47,13 +47,13 @@ paths:
         schema:
           type: string
       responses:
-        200:
+        '200':
           description: Successful operation
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Verb'
-        400:
+        '400':
           description: Invalid parameter value
           content: {}
     put:
@@ -74,13 +74,13 @@ paths:
               $ref: '#/components/schemas/Verb'
         required: true
       responses:
-        200:
+        '200':
           description: Successful operation
           content: {}
-        400:
+        '400':
           description: Invalid parameter value
           content: {}
-        404:
+        '404':
           description: Verb not found
           content: {}
     delete:
@@ -94,13 +94,13 @@ paths:
         schema:
           type: string
       responses:
-        200:
+        '200':
           description: Successful operation
           content: {}
-        400:
+        '400':
           description: Invalid parameter value
           content: {}
-        404:
+        '404':
           description: Verb not found
           content: {}
 components:
