@@ -10,7 +10,10 @@ import java.util.List;
 @RestController
 public class VerbController {
 
-    // TODO how to add error responses to generated OpenAPI spec?
+    // TODO how to fine-tune error responses for generated OpenAPI spec?
+    // See https://springdoc.org/#error-handling-for-rest-using-controlleradvice
+    // and https://www.baeldung.com/exception-handling-for-rest-with-spring
+    // and https://www.baeldung.com/spring-response-status
     private static final Logger log = LoggerFactory.getLogger(VerbController.class);
 
     private final VerbService verbService;
