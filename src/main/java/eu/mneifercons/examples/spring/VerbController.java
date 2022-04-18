@@ -23,26 +23,26 @@ public class VerbController {
         this.verbService = verbService;
     }
 
-    @PostMapping("/verb")
+    @PostMapping("/v1/verb")
     public void addVerb(@RequestBody Verb verb) {
         log.info("Adding verb: {}", verb);
         this.verbService.addVerb(verb);
     }
 
-    @DeleteMapping("/verb/{name}")
+    @DeleteMapping("/v1/verb/{name}")
     public void deleteVerb(@PathVariable(value = "name") String name) {
         log.info("Deleting verb with name {}", name);
         this.verbService.deleteVerb(name);
     }
 
-    @GetMapping("/verb/{name}")
+    @GetMapping("/v1/verb/{name}")
     @ResponseBody
     public Verb getVerb(@PathVariable(value = "name") String name) {
         log.info("Returning verb with name {}", name);
         return this.verbService.getVerb(name);
     }
 
-    @GetMapping("/verb")
+    @GetMapping("/v1/verb")
     @ResponseBody
     public List<Verb> getVerbs() {
         List<Verb> verbs = this.verbService.getVerbs();
@@ -50,7 +50,7 @@ public class VerbController {
         return verbs;
     }
 
-    @PutMapping("/verb/{name}")
+    @PutMapping("/v1/verb/{name}")
     public void updateVerb(@PathVariable(value = "name") String name, @RequestBody Verb verb) {
         log.info("Updating verb with name {}", name);
         this.verbService.updateVerb(name, verb);
