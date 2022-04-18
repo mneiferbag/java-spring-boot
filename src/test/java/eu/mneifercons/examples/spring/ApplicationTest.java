@@ -12,6 +12,10 @@ class ApplicationTest {
     @Autowired
     private VerbController controller;
 
+    /**
+     * Simple sanity check test that will fail if the application context cannot start.
+     * See https://spring.io/guides/gs/testing-web/
+     */
     @Test
     void contextLoads() {
         assertThat(controller).isNotNull();
