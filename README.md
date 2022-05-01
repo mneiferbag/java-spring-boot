@@ -18,7 +18,7 @@ and the OpenAPI description is available at
 
 ## Gradle
 
-Run `gradle wrapper --gradle-version 7.4` to update the project to 7.4.
+Run `gradle wrapper --gradle-version 7.4.2` to update the project to 7.4.2.
 
 ## Links
 
