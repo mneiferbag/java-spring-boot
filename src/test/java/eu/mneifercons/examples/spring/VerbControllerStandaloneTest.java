@@ -15,7 +15,7 @@ class VerbControllerStandaloneTest {
         given()
                 .standaloneSetup(controller)
                 .when()
-                .get("/verb/trabajar")
+                .get("/v1/verb/trabajar")
                 .then()
                 .statusCode(200)
                 .body("name", equalTo("trabajar"));

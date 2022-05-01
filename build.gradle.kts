@@ -17,9 +17,40 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springdoc:springdoc-openapi-ui:1.6.6")
     implementation("org.glassfish.jaxb:jaxb-runtime")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("io.rest-assured:spring-mock-mvc:4.5.0")
 }
-tasks.test {
-    useJUnitPlatform()
+testing {
+    suites {
+        val test by getting(JvmTestSuite::class) {
+            testType.set(TestSuiteType.UNIT_TEST)
+            useJUnitJupiter()
+            dependencies {
+                implementation("org.springframework.boot:spring-boot-starter-test")
+                implementation("io.rest-assured:spring-mock-mvc:4.5.0")
+            }
+        }
+        val integrationTest by registering(JvmTestSuite::class) {
+            testType.set(TestSuiteType.INTEGRATION_TEST)
+            dependencies {
+                implementation(project)
+                implementation("io.rest-assured:rest-assured:4.5.1")
+                implementation("io.rest-assured:json-path:4.5.1")
+                implementation("io.rest-assured:xml-path:4.5.1")
+            }
+            sources {
+                java {
+                    setSrcDirs(listOf("src/it/java"))
+                }
+            }
+            targets {
+                all {
+                    testTask.configure {
+                        shouldRunAfter(test)
+                    }
+                }
+            }
+        }
+    }
+}
+tasks.named("check") {
+    dependsOn(testing.suites.named("integrationTest"))
 }
