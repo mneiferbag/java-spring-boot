@@ -14,9 +14,10 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springdoc:springdoc-openapi-ui:1.6.6")
-    implementation("org.glassfish.jaxb:jaxb-runtime")
+    implementation("org.springframework.boot:spring-boot-starter-test:2.7.0")
+    implementation("org.springframework.boot:spring-boot-starter-web:2.7.0")
+    implementation("org.springdoc:springdoc-openapi-ui:1.6.8")
+    implementation("org.glassfish.jaxb:jaxb-runtime:4.0.0")
 }
 testing {
     suites {

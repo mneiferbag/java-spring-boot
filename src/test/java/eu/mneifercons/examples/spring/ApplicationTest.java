@@ -14,7 +14,7 @@ class ApplicationTest {
 
     /**
      * Simple sanity check test that will fail if the application context cannot start.
-     * See https://spring.io/guides/gs/testing-web/
+     * See <a href="https://spring.io/guides/gs/testing-web/">https://spring.io/guides/gs/testing-web/</a>
      */
     @Test
     void contextLoads() {

@@ -34,6 +34,7 @@ Run `gradle wrapper --gradle-version 7.4.2` to update the project to 7.4.2.
   * [REST Assured](http://rest-assured.io/) - Testing and validating REST services in Java
   * [Testing the Web Layer](https://spring.io/guides/gs/testing-web/) - Spring Guide
 * General
+  * [GitHub Action Setup Java](https://github.com/actions/setup-java) for use with GitHub CodeQL
   * [Gradle Build Tool](https://gradle.org/)
   * [Gretty](https://gretty-gradle-plugin.github.io/gretty-doc/about.html) - a feature-rich gradle plugin for running web-apps on embedded servlet containers
   * [Java Development Examples](https://github.com/mneiferbag/java-examples)
