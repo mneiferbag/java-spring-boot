@@ -42,7 +42,7 @@ Run `gradle wrapper --gradle-version 7.4.2` to update the project to 7.4.2.
 
 ## Tasks
 
-- [ ] Upgrade to latest versions of Java, Spring Boot, Gradle
+- [ ] Upgrade to latest versions of Java, Spring Boot, Gradle, see [Upgrade Guide](./doc/upgrade_guide.adoc)
 - [ ] Add Jetty execution in check task before integration tests are run
 - [ ] Compare generated openapi.yaml and api_v3.yaml
 - [ ] Add Gradle integration tests
