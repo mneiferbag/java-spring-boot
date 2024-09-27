@@ -1,0 +1,16 @@
+= Upgrade Guide
+Markus Neifer
+0.1, 27.09.2024: _DRAFT
+:toc:
+
+== Java
+
+NOTE: TODO upgrade to latest LTS version
+
+== Gradle
+
+NOTE: TODO upgrade to latest version
+
+== Spring Boot
+
+NOTE: TODO upgrade to latest version
