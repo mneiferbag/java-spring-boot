@@ -42,9 +42,10 @@ Run `gradle wrapper --gradle-version 7.4.2` to update the project to 7.4.2.
 
 ## Tasks
 
-- Add Jetty execution in check task before integration tests are run
-- Compare generated openapi.yaml and api_v3.yaml
-- Gradle integration tests
+- [ ] Upgrade to latest versions of Java, Spring Boot, Gradle
+- [ ] Add Jetty execution in check task before integration tests are run
+- [ ] Compare generated openapi.yaml and api_v3.yaml
+- [ ] Add Gradle integration tests
   - https://docs.gradle.org/current/userguide/migrating_from_maven.html#migmvn:build_lifecycle
   - https://docs.gradle.org/current/userguide/migrating_from_maven.html#migmvn:integration_tests
   - https://docs.gradle.org/current/userguide/java_testing.html#sec:configuring_java_integration_tests 
