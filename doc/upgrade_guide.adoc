@@ -1,16 +1,18 @@
 = Upgrade Guide
 Markus Neifer
-0.1, 27.09.2024: _DRAFT
+0.1, 07.10.2024: _DRAFT
 :toc:
 
 == Java
 
-NOTE: TODO upgrade to latest LTS version
+Target LTS version is: 21
 
 == Gradle
 
-NOTE: TODO upgrade to latest version
+Existing Gradle version is: 7.4.2 (from `gradle/wrapper/gradle-wrapper.properties`)
 
 == Spring Boot
 
-NOTE: TODO upgrade to latest version
+Existing Spring Boot version is: `id("org.springframework.boot") version "2.6.3"` (from `build.gradle.kts`)
+
+See the following article: https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Migration-Guide[Spring Boot 3.0 Migration Guide]
