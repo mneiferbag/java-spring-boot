@@ -1,6 +1,6 @@
 = Upgrade Guide
 Markus Neifer
-0.1, 07.10.2024: _DRAFT
+0.1, 08.10.2024: _DRAFT
 :toc:
 
 == Java
@@ -10,6 +10,10 @@ Target LTS version is: 21
 == Gradle
 
 Existing Gradle version is: 7.4.2 (from `gradle/wrapper/gradle-wrapper.properties`)
+
+Latest Gradle version is 8.x.
+
+See https://docs.gradle.org/current/userguide/upgrading_version_7.html[Upgrading your build from Gradle 7.x to 8.0] for upgrade advice.
 
 == Spring Boot
 
