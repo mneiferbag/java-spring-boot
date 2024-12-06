@@ -3,9 +3,7 @@ Markus Neifer
 0.2, 06.12.2024: _DRAFT
 :toc:
 
-== Java
-
-Target LTS version is: 21
+Changes on feature branch feature/upgrade-versions.
 
 == Gradle
 
@@ -14,6 +12,30 @@ Existing Gradle version is: 7.4.2 (from `gradle/wrapper/gradle-wrapper.propertie
 Latest Gradle version is 8.x.
 
 See https://docs.gradle.org/current/userguide/upgrading_version_7.html[Upgrading your build from Gradle 7.x to 8.0] for upgrade advice.
+
+Try to upgrade to latest Gradle version before upgrading the Java version because the latest version of Gradle might not run with an older Java version.
+
+Run `gradle wrapper --gradle-version 8.11.1`
+
+== Java
+
+Target LTS version is: 21
+
+Update `build.gradle.kts`:
+
+From:
+
+    java {
+       sourceCompatibility = JavaVersion.VERSION_11
+       targetCompatibility = JavaVersion.VERSION_11
+    }
+
+To:
+
+    java {
+       sourceCompatibility = JavaVersion.VERSION_21
+       targetCompatibility = JavaVersion.VERSION_21
+    }
 
 == Spring Boot
 
