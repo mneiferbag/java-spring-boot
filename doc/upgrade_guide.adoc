@@ -1,16 +1,46 @@
 = Upgrade Guide
 Markus Neifer
-0.1, 27.09.2024: _DRAFT
+0.2, 06.12.2024: _DRAFT
 :toc:
 
-== Java
-
-NOTE: TODO upgrade to latest LTS version
+Changes on feature branch feature/upgrade-versions.
 
 == Gradle
 
-NOTE: TODO upgrade to latest version
+Existing Gradle version is: 7.4.2 (from `gradle/wrapper/gradle-wrapper.properties`)
+
+Latest Gradle version is 8.x.
+
+See https://docs.gradle.org/current/userguide/upgrading_version_7.html[Upgrading your build from Gradle 7.x to 8.0] for upgrade advice.
+
+Try to upgrade to latest Gradle version before upgrading the Java version because the latest version of Gradle might not run with an older Java version.
+
+Run `gradle wrapper --gradle-version 8.11.1`
+
+== Java
+
+Target LTS version is: 21
+
+Update `build.gradle.kts`:
+
+From:
+
+    java {
+       sourceCompatibility = JavaVersion.VERSION_11
+       targetCompatibility = JavaVersion.VERSION_11
+    }
+
+To:
+
+    java {
+       sourceCompatibility = JavaVersion.VERSION_21
+       targetCompatibility = JavaVersion.VERSION_21
+    }
 
 == Spring Boot
 
-NOTE: TODO upgrade to latest version
+See the following article: https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Migration-Guide[Spring Boot 3.0 Migration Guide]
+
+Existing Spring Boot version is: `id("org.springframework.boot") version "2.6.3"` (from `build.gradle.kts`)
+
+Dependabot suggests to update org.springframework.boot:spring-boot-starter-web from 2.7.0 to 3.4.0. See PR https://github.com/mneiferbag/java-spring-boot/pull/8[Bump org.springframework.boot:spring-boot-starter-web from 2.7.0 to 3.4.0 in the gradle group across 1 directory].
