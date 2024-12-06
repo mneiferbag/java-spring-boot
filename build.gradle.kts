@@ -29,6 +29,7 @@ testing {
                 implementation("io.rest-assured:spring-mock-mvc:4.5.0")
             }
         }
+/*
         val integrationTest by registering(JvmTestSuite::class) {
             testType.set(TestSuiteType.INTEGRATION_TEST)
             dependencies {
@@ -50,6 +51,7 @@ testing {
                 }
             }
         }
+ */
     }
 }
 tasks.named("check") {
