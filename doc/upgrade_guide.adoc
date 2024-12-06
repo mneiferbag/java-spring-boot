@@ -1,6 +1,6 @@
 = Upgrade Guide
 Markus Neifer
-0.1, 27.09.2024: _DRAFT
+0.2, 06.12.2024: _DRAFT
 :toc:
 
 == Java
@@ -14,3 +14,5 @@ NOTE: TODO upgrade to latest version
 == Spring Boot
 
 NOTE: TODO upgrade to latest version
+
+Dependabot suggests to update org.springframework.boot:spring-boot-starter-web from 2.7.0 to 3.4.0. See PR https://github.com/mneiferbag/java-spring-boot/pull/8[Bump org.springframework.boot:spring-boot-starter-web from 2.7.0 to 3.4.0 in the gradle group across 1 directory].
