@@ -1,6 +1,6 @@
 = Upgrade Guide
 Markus Neifer
-0.1, 08.10.2024: _DRAFT
+0.2, 06.12.2024: _DRAFT
 :toc:
 
 == Java
@@ -17,6 +17,8 @@ See https://docs.gradle.org/current/userguide/upgrading_version_7.html[Upgrading
 
 == Spring Boot
 
+See the following article: https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Migration-Guide[Spring Boot 3.0 Migration Guide]
+
 Existing Spring Boot version is: `id("org.springframework.boot") version "2.6.3"` (from `build.gradle.kts`)
 
-See the following article: https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Migration-Guide[Spring Boot 3.0 Migration Guide]
+Dependabot suggests to update org.springframework.boot:spring-boot-starter-web from 2.7.0 to 3.4.0. See PR https://github.com/mneiferbag/java-spring-boot/pull/8[Bump org.springframework.boot:spring-boot-starter-web from 2.7.0 to 3.4.0 in the gradle group across 1 directory].
