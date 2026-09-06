@@ -1,7 +1,7 @@
 plugins {
     java
-    id("org.springframework.boot") version "2.6.3"
-    id("io.spring.dependency-management") version "1.0.11.RELEASE"
+    id("org.springframework.boot") version "4.1.1"
+    id("io.spring.dependency-management") version "1.1.7"
 }
 java {
     sourceCompatibility = JavaVersion.VERSION_21
@@ -14,19 +14,17 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-test:2.7.0")
-    implementation("org.springframework.boot:spring-boot-starter-web:3.4.0")
-    implementation("org.springdoc:springdoc-openapi-ui:1.6.8")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.1.0")
     implementation("org.glassfish.jaxb:jaxb-runtime:4.0.0")
 }
 testing {
     suites {
         val test by getting(JvmTestSuite::class) {
-            testType.set(TestSuiteType.UNIT_TEST)
             useJUnitJupiter()
             dependencies {
                 implementation("org.springframework.boot:spring-boot-starter-test")
-                implementation("io.rest-assured:spring-mock-mvc:4.5.0")
+                implementation("io.rest-assured:spring-mock-mvc:6.0.1")
             }
         }
 /*
@@ -53,7 +51,4 @@ testing {
         }
  */
     }
-}
-tasks.named("check") {
-    dependsOn(testing.suites.named("integrationTest"))
 }
