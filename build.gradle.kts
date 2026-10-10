@@ -15,7 +15,7 @@ repositories {
 }
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.1.0")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.1.1")
     implementation("org.glassfish.jaxb:jaxb-runtime:4.0.0")
 }
 testing {
