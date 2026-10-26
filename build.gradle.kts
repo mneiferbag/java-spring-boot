@@ -24,7 +24,7 @@ testing {
             useJUnitJupiter()
             dependencies {
                 implementation("org.springframework.boot:spring-boot-starter-test")
-                implementation("io.rest-assured:spring-mock-mvc:6.1.0")
+                implementation("io.rest-assured:spring-mock-mvc:6.2.0")
             }
         }
 /*
